@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Divertido</title>
+</head>
+<body>
+    <div class="background">
+        <div class="login-container">
+            <img src="https://img.freepik.com/vetores-gratis/simbolo-da-familia-gradiente_23-2149302080.jpg?t=st=1730659885~exp=1730663485~hmac=c22873de205001a5bab94a47d4e6430697fc2f02ae7dcd5f96ce7e94cfee32b1&w=740" alt="Logo" class="logo">
+            <h1>RAFA VIANA </h1>
+            <h1>LOGIN</h1>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Usuário" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+                <p id="error-message" class="error-message"></p>
+            </form>
+            <div class="footer">
+                <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+            </div>
+            <div id="clock"></div>
+            <script>
+                // Função para atualizar o relógio
+                function updateClock() {
+                    const now = new Date();
+                    const hours = String(now.getHours()).padStart(2, '0');
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    const seconds = String(now.getSeconds()).padStart(2, '0');
+                    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+                }
+            
+                // Estilizando o relógio
+                document.getElementById('clock').style.fontSize = '2rem';
+                document.getElementById('clock').style.color = 'white';
+                document.getElementById('clock').style.background = 'linear-gradient(45deg, #6a0dad, #00aaff)';
+                document.getElementById('clock').style.padding = '20px';
+                document.getElementById('clock').style.borderRadius = '10px';
+                document.getElementById('clock').style.textAlign = 'center';
+                document.getElementById('clock').style.position = 'fixed';
+                document.getElementById('clock').style.right = '20px';
+                document.getElementById('clock').style.top = '20px';
+                document.getElementById('clock').style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.3)';
+            
+                // Atualiza o relógio a cada segundo
+                setInterval(updateClock, 1000);
+                updateClock(); // Chama imediatamente para não esperar 1 segundo
+            </script>
+        </div>
+        <img src="https://i.pinimg.com/originals/59/b8/c8/59b8c8622c076c5dc7bac0dd591c712c.gif" alt="Imagem de Fundo" class="background-image">
+    </div>
+
+    <script src="script.js"></script>
+</form>
+</div>
+
+</body>
+</html>
